@@ -63,7 +63,8 @@ public class ItemService {
 	public List<Item> addMultipleItems(List<Item> items){
 		List<Item> savedItems = new ArrayList<>();
 		for(Item i :  items) {
-			itemRepository.save(i);
+			Item savedItem = itemRepository.save(i);
+			savedItems.add(savedItem);
 		}
 		return savedItems;
 	}

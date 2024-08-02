@@ -1,5 +1,7 @@
 package com.example.restaurant.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
@@ -22,6 +24,7 @@ public class BillItem {
    
 	@ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "bill_id")
+	@JsonIgnore
     private Bill bill;
 	
 	 public Bill getBill() {
