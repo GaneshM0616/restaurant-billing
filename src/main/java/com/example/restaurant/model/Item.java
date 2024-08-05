@@ -14,7 +14,16 @@ public class Item {
 	private String name;
 	private double price;
 	private Integer quantity;
+	private String image;
 	
+	
+	
+	public String getImage() {
+		return image;
+	}
+	public void setImage(String image) {
+		this.image = image;
+	}
 	public Integer getQuantity() {
 		return quantity;
 	}

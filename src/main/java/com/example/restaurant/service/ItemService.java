@@ -36,6 +36,7 @@ public class ItemService {
 				Item oldItem = optionalItem.get();
 				oldItem.setName(item.getName());
 				oldItem.setPrice(item.getPrice());
+				oldItem.setImage(item.getImage());		
 				return itemRepository.save(oldItem);
 			} else {
 				throw new RuntimeException("Food item not found with id " + id);
@@ -68,5 +69,6 @@ public class ItemService {
 		}
 		return savedItems;
 	}
+	
 
 }
